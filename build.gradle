@@ -24,6 +24,12 @@ dependencies {
     runtimeOnly 'com.mysql:mysql-connector-j'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    runtimeOnly 'org.apache.tomcat.embed:tomcat-embed-jasper:10.1.12' // jsps
+    runtimeOnly 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0' // helpful JSP tags
+    runtimeOnly 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.0' // helpful JSP tags
+
+
 }
 
 tasks.named('test') {

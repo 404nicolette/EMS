@@ -2,6 +2,7 @@ package com.example.spring.model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -13,22 +14,14 @@ public class Employee {
     private String firstName;
     private String lastName;
     private String email;
-    private Date hireDate;
+    private String position;
+    private LocalDate hireDate;
 
     @ManyToOne
     private Department department;
 
     @ManyToMany
     private List<Project> project;
-
-
-    public long getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(long employeeId) {
-        this.employeeId = employeeId;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -54,12 +47,20 @@ public class Employee {
         this.email = email;
     }
 
-    public Date getHireDate() {
+    public LocalDate getHireDate() {
         return hireDate;
     }
 
-    public void setHireDate(Date hireDate) {
+    public void setHireDate(LocalDate hireDate) {
         this.hireDate = hireDate;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 
     public Department getDepartment() {

@@ -1,7 +1,5 @@
 package com.example.spring.dto;
 
-import com.example.spring.model.Project;
-
 import java.util.Date;
 
 public class EmployeeDTO {
@@ -12,7 +10,7 @@ public class EmployeeDTO {
     private Date hireDate;
     private long projectId;
 
-    public EmployeeDTO(long employeeId, String firstName, String lastName, String email, Date hireDate, long projectId) {
+    public EmployeeDTO(String firstName, String lastName, String email) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
